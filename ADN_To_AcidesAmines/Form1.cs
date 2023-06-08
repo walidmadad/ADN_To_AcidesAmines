@@ -39,6 +39,7 @@ namespace ADN_To_AcidesAmines
                     case "C":
                         adn_tr += "G";
                         break;
+
                     case " ":
                         adn_tr += " ";
                         break;
@@ -82,6 +83,9 @@ namespace ADN_To_AcidesAmines
                     case "C":
                         arn += "G";
                         break;
+                    case "-":
+                        arn += " ";
+                        break;
                     case " ":
                         arn += " ";
                         break;
@@ -116,6 +120,9 @@ namespace ADN_To_AcidesAmines
                 string cha = arn_m.Substring(x, 1);
                 switch (cha)
                 {
+                    case "-":
+                        chara += null;
+                        break;
                     case " ":
                         chara += null;
                         break;
