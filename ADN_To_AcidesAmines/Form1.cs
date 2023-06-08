@@ -39,7 +39,9 @@ namespace ADN_To_AcidesAmines
                     case "C":
                         adn_tr += "G";
                         break;
-
+                    case "-":
+                        chara += " ";
+                        break;
                     case " ":
                         adn_tr += " ";
                         break;
@@ -211,10 +213,14 @@ namespace ADN_To_AcidesAmines
                     else if (chara == "GAA" || chara == "GAG")
                     {
                         acides += "Glu-";
-                    }
+                    }                    
                     else if (chara == "UGU" || chara == "UGC")
                     {
                         acides += "Cys-";
+                    }
+                    else if (chara == "UGG")
+                    {
+                        acides += "Trp-";
                     }
                     else if (chara == "CGU" || chara == "CGC" || chara == "CGA" || chara == "CGG" || chara == "AGA" || chara == "AGG")
                     {
@@ -224,7 +230,7 @@ namespace ADN_To_AcidesAmines
                     {
                         acides += "Gly-";
                     }
-                    else if (chara == "AUU" || chara == "AUC" || chara == "AUA")
+                    else if (chara == "UAA" || chara == "UAG" || chara == "UGA")
                     {
                         acides += "STOP";
                     }
